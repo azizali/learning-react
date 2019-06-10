@@ -1,12 +1,31 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import * as serviceWorker from './serviceWorker';
+import React from 'react'
+import ReactDOM from 'react-dom'
 
-ReactDOM.render(<App />, document.getElementById('root'));
+// First Component
+// Component is Capitalized
+// It always returns a user-interface
+// One element can be returned
+function App(){
+  var appName = 'Name of App'
+  var isLive = false;
+  return (
+    <div>
+      <header>Logo goes here {appName}</header>
+      { 2 / 5 }
+      <br/>
+      { (isLive)? <Person name="SalesForce" /> : null }
+      <br/>
+      <footer>Footer info</footer>
+    </div>
+  )
+}
 
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: https://bit.ly/CRA-PWA
-serviceWorker.unregister();
+function Person(props){
+  return (
+    <>
+      Company Name: {props.name}<br />
+    </>
+  )
+}
+
+ReactDOM.render(<App />, document.querySelector('#app'))
