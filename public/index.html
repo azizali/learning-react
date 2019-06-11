@@ -5,8 +5,55 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Document</title>
+  <style>
+    div{
+      border: 1px solid black;
+      padding: 10px;
+    }
+    div#test{
+      border-color: blue;
+      border-width: 10px;
+    }
+    .b > .childRajesh{
+      background-color: yellow;
+    }
+    .b > .childRajesh span ~ h1, div span a b {
+      color: red
+    }
+  </style>
 </head>
-<body>
+<body class="abc">
   <div id="app"></div>
+  <div id="test">
+    <div class="a">
+      A
+      <div class="childRajesh">
+        Child
+      </div>
+    </div>
+    <div class="b">B ONE
+        <div class="childRajesh">
+            Child
+            <span>
+                <h1>Aziz</h1>
+            </span>
+            <h1>Aziz</h1>
+        </div>
+    </div>
+    <div class="b">B TWO PARENT
+        <div>
+          CHILD
+          <div class="childRajesh">
+            GRAND CHILD
+          </div>
+        </div>
+        <div class="childRajesh">
+            Child
+        </div>
+        <div class="childRajesh">
+            Child
+        </div>
+    </div>
+  </div>
 </body>
 </html>

@@ -1,30 +1,18 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-
+import Button, { util } from './Button'
 // First Component
 // Component is Capitalized
 // It always returns a user-interface
 // One element can be returned
 function App(){
-  var appName = 'Name of App'
-  var isLive = false;
+  util()
   return (
     <div>
-      <header>Logo goes here {appName}</header>
-      { 2 / 5 }
-      <br/>
-      { (isLive)? <Person name="SalesForce" /> : null }
-      <br/>
-      <footer>Footer info</footer>
+      <Button id="1" name="a" type="button" value="I am button"/>
+      <Button id="2" extra="b" type="submit" value="I am submit"/>
+      <Button id="3" type="anchor" value="I am anchor" to="https://salesforce.com" />
     </div>
-  )
-}
-
-function Person(props){
-  return (
-    <>
-      Company Name: {props.name}<br />
-    </>
   )
 }
 

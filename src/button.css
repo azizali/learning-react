@@ -1,0 +1,16 @@
+/* // CSS SELECTORs */
+/* div{
+  background-color: green;
+} */
+
+button{
+  padding: 50px;
+}
+
+.btn {
+  border: 2px solid blue
+}
+
+.btn-lg{
+  font-size: 1.5em;
+}
