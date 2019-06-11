@@ -1,22 +1,16 @@
+import './_main/style.css'
 import React from 'react'
 import ReactDOM from 'react-dom'
-import { Cars } from './Cars/'
-import Wrap from './Wrap/'
-import Button from './Button/'
-import LoginLayout from './Login/'
+import Header from './Header/'
+import Content from './Content/'
+import Footer from './Footer/'
 
 function App(){
   return (
     <div>
-      <Wrap hasHeader={true}>
-        <LoginLayout />
-        <Button>Click me please</Button>
-        {/* <Button value="click text" /> */}
-        Info one
-      </Wrap>
-      <Wrap>
-        Info Two
-      </Wrap>
+      <Header />
+      <Content />
+      <Footer />
     </div>
   )
 }
