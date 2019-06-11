@@ -9,22 +9,22 @@ import './button.css'
 // var value = props.value
 // var to = props.to
 // var {}
-function Button({ to, type, value, ...props}){
+function Button({ to, type, children, ...props}){
   if(type === 'button'){
     return <button style={{
       backgroundColor: 'blue',
       fontSize: '2em'
-    }} { ...props}>{value}</button>
+    }} { ...props}>{children}</button>
   }else if(type === 'anchor'){
-    return <a className="btn" {...props} href={to}>{value}</a>
+    return <a className="btn" {...props} href={to}>{children}</a>
   } else if(type === 'submit'){
-    return <input {...props} type="submit" value={value} />
+    return <input {...props} type="submit" value={children} />
   }
 }
 
 Button.defaultProps = {
-  // type: 'button',
-  value: 'Click me'
+  type: 'button',
+  children: 'Click me'
 }
 
 Button.propTypes = {
