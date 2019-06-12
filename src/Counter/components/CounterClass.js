@@ -1,4 +1,5 @@
 import React from 'react'
+import Score from './Score'
 
 export default class Counter extends React.Component{
   // Class Properties
@@ -13,21 +14,38 @@ export default class Counter extends React.Component{
     // this.handleClick = this.handleClick.bind(this)
   }
 
-  handleClick = () => {
-    console.log('i was clicked')
+  increaseCount = () => {
     const newCounter = this.state.counter + 1
 
     this.setState({
       counter: newCounter
     })
   }
+  
+  decreaseCount = () => {
+    const newCounter = this.state.counter - 1
+
+    this.setState({
+      counter: newCounter
+    })
+  }
+
+  setStateToVal = (val) =>{
+    this.setState({ counter: val })
+  }
 
   render(){
     return(
       <div>
-        CounterClass:
-        <button onClick={this.handleClick}>{this.state.counter}</button>
-        <button onClick={this.handleClick}>{this.state.counter}</button>
+        CounterClass: &nbsp;
+        <button onClick={this.increaseCount}>{this.state.counter} +</button>
+        <button onClick={this.decreaseCount}>{this.state.counter} -</button>
+        {this.state.counter > 5
+          &&
+          <Score
+            score={this.state.counter}
+            setScore={this.setStateToVal}
+          />}
       </div>
     )
   }
