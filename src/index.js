@@ -1,17 +1,11 @@
 import './_main/style.css'
 import React from 'react'
 import ReactDOM from 'react-dom'
-import Header from './Header/'
-import Content from './Content/'
-import Footer from './Footer/'
+import Counter from './Counter/'
 
 function App(){
   return (
-    <div>
-      <Header />
-      <Content />
-      <Footer />
-    </div>
+    <Counter initialVal={5} />
   )
 }
 
