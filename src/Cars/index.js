@@ -1,10 +1,5 @@
-import React from 'react'
-import data from './data'
+import Cars from './components/Cars'
+import CarsClass from './components/CarsClass'
 
-export function Cars (){
-  return (<>
-  {data.map(function(item, index){
-    return <div key={index}>{item.name}</div>
-  })}
-  </>)
-}
+export default Cars
+export { CarsClass }
