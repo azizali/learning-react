@@ -11,7 +11,16 @@ export default function CountryInfo ({countryName}){
     fetch(url)
       .then((data)=> data.json())
       .then((json)=>{
-        setAge(json[100].total)
+        // let population = 0
+        // json.forEach((item)=>{
+        //   population += item.total
+        // })
+
+        const population = json.reduce((total, item) => {
+          return total + item.total
+        }, 0)
+
+        setAge(population)
       })
       .catch((error)=>{
         console.log(error)
