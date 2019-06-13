@@ -1,0 +1,8 @@
+.wrap {
+  display: flex
+}
+
+.country-list, .country-info{
+  border: 2px solid blue;
+  padding: 10px;
+}
