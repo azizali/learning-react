@@ -3,12 +3,12 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 // import Counter, { CounterClass } from './Counter/'
 // import Cars, { CarsClass } from './Cars/'
-import { CountryList } from './Countries/'
+import { CountryListHook } from './Countries/'
 
 function App(){
   return (
     <>
-      <CountryList />
+      <CountryListHook />
     </>
   )
 }
