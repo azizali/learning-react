@@ -53,7 +53,6 @@ export default function Countries (){
       </div>
       <div className="country-info">
         {
-          counter > 1 &&
           <CountryInfoHook countryName={selected} />
         }
       </div>

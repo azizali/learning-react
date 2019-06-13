@@ -1,10 +1,10 @@
-/* eslint-disable react-hooks/exhaustive-deps */
-import React, {useState, useEffect} from 'react'
+
+import React, {useState, useEffect, useCallback} from 'react'
 
 export default function CountryInfo ({countryName}){
   const [age, setAge] = useState(0)
 
-  const fetchPopulation = ()=>{
+  const fetchPopulation = useCallback(() =>{
     // TEMPLATE LITERALS
     const url = `http://54.72.28.201:80/1.0/population/1980/${countryName}`
 
@@ -16,7 +16,7 @@ export default function CountryInfo ({countryName}){
       .catch((error)=>{
         console.log(error)
       })
-  }
+  }, [countryName])
 
   useEffect(()=>{
     console.log('hi')
@@ -30,7 +30,7 @@ export default function CountryInfo ({countryName}){
       // UNSUBSCRIBE, LOGOUT 
       console.log('Cleanup Ran')
     }
-  }, [countryName])
+  }, [countryName, fetchPopulation])
 
   return (
     <div>
